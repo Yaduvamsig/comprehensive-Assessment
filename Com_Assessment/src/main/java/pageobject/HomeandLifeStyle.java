@@ -29,7 +29,7 @@ public static Logger log=Logger.getLogger(ReadPropertyFile.class.getName());
 	}
 	
 	@Test
-	public void logintest() throws InterruptedException {
+	public void HomeandLifeStyle() throws InterruptedException {
 		HomeandLifeStyleDetails l=new HomeandLifeStyleDetails(driver);
 		
 		
@@ -44,14 +44,16 @@ public static Logger log=Logger.getLogger(ReadPropertyFile.class.getName());
 		l.getpantry().click();
 		Thread.sleep(2000);
 		Select s= new Select(l.getname());
-		s.selectByIndex(3);
+		s.selectByIndex(2);
 		l.getitem().click();
+		Thread.sleep(1000);
 		l.getqty().click();
 		l.getpincode().sendKeys("521333");
 		Thread.sleep(3000);
 		l.getcheck().click();
 		Thread.sleep(5000);
 		System.out.println(l.gettext().getText());
+		log.info("navigated to Homelifestyle");
 		
 		
 		

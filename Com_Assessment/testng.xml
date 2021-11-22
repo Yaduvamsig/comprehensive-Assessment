@@ -50,5 +50,10 @@
       <class name="pageobject.TrackOrderPage"/>
     </classes>
   </test> <!-- Test -->
-
-</suite> <!-- Suite -->
+   
+    <test thread-count="5" name="Santagifts">
+    <classes>
+      <class name="pageobject.SantaGifts"/>
+    </classes>
+  </test> <!-- Test -->
+  </suite>

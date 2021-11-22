@@ -20,7 +20,7 @@ public class CorporateGifts extends ReadPropertyFile {
 	}
 
 	@Test
-	public void PersonalizedGift() throws InterruptedException {
+	public void CorporateGifts() throws InterruptedException {
 
 		driver.get(p.getProperty("url"));
 		driver.manage().window().maximize();
@@ -33,7 +33,7 @@ public class CorporateGifts extends ReadPropertyFile {
 		c.getPhone().sendKeys("9398318329");
 		c.getDesc().sendKeys("this is description");
 		c.getSubmit().click();
-		log.info("Submitted successfully");
+		log.info(" navigated to corporate gifts and Submitted successfully");
 
 	}
 

@@ -25,7 +25,7 @@ public class SigninPage extends ReadPropertyFile {
 	}
 
 	@Test
-	public void SignIn() throws InterruptedException, IOException {
+	public void SigninPage() throws InterruptedException, IOException {
 
 		driver.get(p.getProperty("url"));
 		driver.manage().window().maximize();
@@ -49,6 +49,7 @@ public class SigninPage extends ReadPropertyFile {
 		}
 
 		s.getSigninButton().click();
+		log.info("to the signin page");
 
 	}
 

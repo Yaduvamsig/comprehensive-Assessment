@@ -23,7 +23,7 @@ public static Logger log=Logger.getLogger(ReadPropertyFile.class.getName());
 	}
 	
 	@Test
-	public void logintest() throws InterruptedException {
+	public void TrackOrderPage() throws InterruptedException {
 		
 		
 		driver.get(p.getProperty("url"));
@@ -50,6 +50,7 @@ public static Logger log=Logger.getLogger(ReadPropertyFile.class.getName());
 		    Thread.sleep(2000);
 		    driver.close(); 
 		    driver.switchTo().window(parentId);
+		    log.info("trackorderpage completed");
 
 	}
 	

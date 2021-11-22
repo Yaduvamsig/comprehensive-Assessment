@@ -77,3 +77,10 @@ And Navigate to "https://www.bigsmall.in/" site
 Then choose ShopbyCategory and click Travel Acccessories
 And select key chain and add to cart
 And Close the driver
+
+Scenario: Cancel
+Given Initialize browser with chrome
+And Navigate to "https://www.bigsmall.in/" site
+Then Click on Rock on Stand
+Then Click on Click here
+And Close the driver

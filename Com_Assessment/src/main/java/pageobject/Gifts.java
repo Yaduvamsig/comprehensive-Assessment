@@ -21,7 +21,7 @@ public class Gifts extends ReadPropertyFile{
 		driver=DriverInitialisation();
 	}
 	@Test
-	public void GiftHover() throws InterruptedException {
+	public void Gifts() throws InterruptedException {
 		
 		
 		
@@ -36,6 +36,7 @@ public class Gifts extends ReadPropertyFile{
 
 		action.moveToElement(g.getGifts()).perform();
 		g.getgiftforkids().click();
+		log.info(" submitted successfully ");
 		
 	}
 	@AfterTest

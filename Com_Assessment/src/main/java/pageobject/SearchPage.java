@@ -24,7 +24,7 @@ public class SearchPage  extends ReadPropertyFile {
 		driver=DriverInitialisation();
 	}
 	@Test
-	public void SearchBar() throws InterruptedException {
+	public void SearchPage() throws InterruptedException {
 		
 		
 		

@@ -21,7 +21,7 @@ public class MouseActions extends ReadPropertyFile {
 	}
 
 	@Test
-	public void logintest() throws InterruptedException {
+	public void MouseActions() throws InterruptedException {
 		MouseActionsDetails m = new MouseActionsDetails(driver);
 
 		driver.get(p.getProperty("url"));
@@ -34,6 +34,7 @@ public class MouseActions extends ReadPropertyFile {
 
 		action.moveToElement(m.getimagemovment()).perform();
 		Thread.sleep(10000);
+		log.info("performed mouse actions");
 
 	}
 

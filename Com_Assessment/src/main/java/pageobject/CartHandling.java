@@ -21,7 +21,7 @@ public class CartHandling extends ReadPropertyFile {
 	}
 
 	@Test
-	public void logintest() throws InterruptedException {
+	public void CartHandling() throws InterruptedException {
 		CartHandlingDetails a = new CartHandlingDetails(driver);
 
 		driver.get(p.getProperty("url"));
@@ -41,6 +41,7 @@ public class CartHandling extends ReadPropertyFile {
 		a.getmessage().sendKeys("diwali Gift");
 		Thread.sleep(3000);
 		System.out.println(a.gettotal().getText());
+		log.info("navigated to All of it page");
 
 		System.setProperty("webdriver.chrome.driver", "//chrome path in system//");
 		ChromeOptions options = new ChromeOptions();

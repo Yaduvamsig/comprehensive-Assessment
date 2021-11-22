@@ -22,7 +22,7 @@ public class Top50 extends ReadPropertyFile{
 		driver=DriverInitialisation();
 	}
 	@Test
-	public void PersonalizedGift() throws InterruptedException {
+	public void Top50() throws InterruptedException {
 		
 		
 		
@@ -40,6 +40,7 @@ public class Top50 extends ReadPropertyFile{
 	  Assert.assertEquals( p.getBook().getText(),"Pokémon Silicone Sling Pouch Bag");
 	  Thread.sleep(2000);
 	  log.info("Assertion passed");
+	  log.info("navigated to top50");
 	  
 	
 	}

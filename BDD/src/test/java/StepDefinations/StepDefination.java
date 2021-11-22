@@ -1,6 +1,8 @@
 package StepDefinations;
 
 import java.util.List;
+
+import org.apache.log4j.Logger;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,6 +13,7 @@ import org.testng.Assert;
 import reusablecomponents.ReadPropertyFile;
 import uistore.SearchPageDetails;
 import uistore.SigninPageDetails;
+import utilities.TakeScreenShot;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -19,11 +22,13 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 public class StepDefination extends ReadPropertyFile {
+	public static Logger log=Logger.getLogger(ReadPropertyFile.class.getName());
 
 	@Given("^Initialize browser with chrome$")
 	public void initialize_browser_with_chrome() throws Throwable {
 
 		driver = DriverInitialisation();
+		
 
 	}
 
@@ -38,6 +43,8 @@ public class StepDefination extends ReadPropertyFile {
 	public void click_on_sign_link_in_home_page_to_land_on_secure_sign_in_page() throws Throwable {
 		SigninPageDetails s = new SigninPageDetails(driver);
 		s.getSignin().click();
+		log.info("sign in page is clicked");
+		
 	}
 
 	@When("^User enters (.+) and (.+) and sign in$")
@@ -48,11 +55,22 @@ public class StepDefination extends ReadPropertyFile {
 
 		s.getPassword().sendKeys(password);
 		s.getSigninButton().click();
+		log.info("sign in page completed");
 
 	}
 	@And("^Close the driver$")
 	public void close_the_driver() throws Throwable {
+TakeScreenShot r = new TakeScreenShot();
+		
+		try {
+			r.getScreenshot("screenshots");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		log.info("driver is closed");
 		driver.close();
+		
 
 	}
 	
@@ -95,6 +113,7 @@ public class StepDefination extends ReadPropertyFile {
 		String a = driver.findElement(By.xpath("//*[@id=\"price-field\"]/span")).getText();
 		
 		Assert.assertEquals(a, "Rs. 699");
+	
 
 	}
 
@@ -118,6 +137,7 @@ public class StepDefination extends ReadPropertyFile {
 	public void check_the_cod_availability() throws Throwable {
 
 		System.out.println(driver.findElement(By.xpath("//*[@id=\"PostalCodeCheckerAvailability\"]")).getText());
+		log.info("checking for cod avalability");
 		
 	}
 
@@ -152,7 +172,7 @@ public class StepDefination extends ReadPropertyFile {
 	
 	
 	@And("^click on Marvel$")
-	public void click_on_marvel() throws Throwable {
+	public void click_on_Marvel() throws Throwable {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id=\"myheader\"]/div[1]/div/div/ul/li[3]/a")).click();
 	}
@@ -161,6 +181,7 @@ public class StepDefination extends ReadPropertyFile {
 	public void check_numberof_links_in_the_page() throws Throwable {
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		System.out.println("The number of links is " + links.size());
+		log.info("total links are printed");
 
 	}
 
@@ -219,6 +240,16 @@ public class StepDefination extends ReadPropertyFile {
 	    	driver.findElement(By.xpath("//*[@id=\"AddToCartForm-4764077457496\"]/button")).click();
 	    	
 	    	
+	    }
+	    
+	    @Then("^Click on Rock on Stand$")
+	    public void click_on_rock_on_stand() throws Throwable {
+	       driver.findElement(By.xpath("//*[@id=\"CollectionSection-1597674868179\"]/div[2]/div/div/div[1]/div/a/div[2]/div[1]")).click();
+	    }
+
+	    @Then("^Click on Click here$")
+	    public void click_on_click_here() throws Throwable {
+	       driver.findElement(By.xpath("//*[@id=\"myownreturntext\"]/a")).click();
 	    }
 
 		

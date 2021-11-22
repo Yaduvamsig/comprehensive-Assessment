@@ -11,8 +11,8 @@ public class HomeandLifeStyleDetails {
 	By lifestyle =By.xpath("//*[@id='myheader']/div[1]/div/div/ul/li[11]/a");
 	By pantry=By.xpath("//*[@id='myheader']/div[1]/div/div/ul/li[11]/ul/li[6]/a");
 	By name=By.xpath("//*[@id='sortBy']");
-	By item=By.xpath("//*[@id='CollectionAjaxContent']/div[1]/div[25]/div/a/div[1]");
-	By qty=By.xpath("//*[@id='AddToCartForm-7048541372614']/div[2]/div/span[1]");
+	By item=By.xpath("//*[@id='CollectionAjaxContent']/div[1]/div[3]/div/a/div[1]");
+	By qty=By.xpath("//*[@id='AddToCartForm-10299105491']/div[2]/div/span[1]");
 	
 	By pc=By.xpath("//*[@id='PostalCode']");
 	By check =By.xpath("//*[@id='cod-cheker']/button");

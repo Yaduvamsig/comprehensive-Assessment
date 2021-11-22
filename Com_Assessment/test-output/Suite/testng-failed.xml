@@ -5,15 +5,15 @@
     <listener class-name="utilities.Listeners"/>
     <listener class-name="utilities.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="PersonalizedGifts(failed)">
+  <test thread-count="5" name="HomeLifeStyle(failed)">
     <classes>
-      <class name="pageobject.PersonilizedGifts">
+      <class name="pageobject.HomeandLifeStyle">
         <methods>
-          <include name="close"/>
           <include name="initialise"/>
-          <include name="PersonalizedGift"/>
+          <include name="logintest"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- pageobject.PersonilizedGifts -->
+      </class> <!-- pageobject.HomeandLifeStyle -->
     </classes>
-  </test> <!-- PersonalizedGifts(failed) -->
+  </test> <!-- HomeLifeStyle(failed) -->
 </suite> <!-- Failed suite [Suite] -->
